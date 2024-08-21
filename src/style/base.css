@@ -1,0 +1,135 @@
+@import url('./settings.css');
+@import url('./hero.css');
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Primary';
+    src: url('/fonts/questrial.woff2') format('woff2'),
+        url('/fonts/questrial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary: #111111;
+    --secondary: #f0f0f0;
+    --alternate: #f1e0ca;
+    --panel-overlay-opacity: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    font-size: max(100vw / 1920 * 10);
+}
+body {
+    font-family: 'Primary';
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.app {
+    position: relative;
+    overflow: hidden;
+}
+
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 12rem;
+}
+h2 {
+    font-size: 6rem;
+}
+h3 {
+    font-size: 4.8rem;
+}
+p {
+    font-size: 2.4rem;
+}
+span {
+    font-size: 1.6rem;
+}
+
+.button {
+    width: 16rem;
+    padding: 0 3.2rem;
+    width: fit-content;
+    height: 6.4rem;
+
+    border: none;
+    border-radius: 32rem;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.button span {
+    font-family: 'Primary';
+    font-size: 2.4rem;
+}
+.button-small {
+    height: 4rem;
+    padding: 0 3.2rem;
+}
+.button-small span {
+    font-family: 'Primary';
+    font-size: 1.6rem;
+}
+.loader_button {
+    position: fixed;
+    left: 4rem;
+    top: 32rem;
+    z-index: 99;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: var(--primary);
+}
+.nav_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    padding: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: calc(100vw / 768 * 10);
+    }
+    span {
+        font-size: 2.4rem;
+    }
+    .button span {
+        font-size: 2.4rem;
+    }
+    .button-small {
+        font-size: 2.4rem;
+    }
+}
