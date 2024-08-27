@@ -8,14 +8,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-@font-face {
-    font-family: 'Primary';
-    src: url('/fonts/questrial.woff2') format('woff2'),
-        url('/fonts/questrial.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     --primary: #111111;
@@ -30,7 +22,7 @@ html {
     font-size: max(100vw / 1920 * 10);
 }
 body {
-    font-family: 'Primary';
+    font-family: 'sans-serif';
     background-color: var(--primary);
     color: var(--secondary);
 }
