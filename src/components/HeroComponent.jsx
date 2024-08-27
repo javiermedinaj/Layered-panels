@@ -121,7 +121,7 @@ const HeroComponent = () => {
 
       <div className="nav">
         <div className="nav_wrapper">
-          <div className="nav_logo"><span><a href="/"> Logo</a></span></div>
+          <div className="nav_logo"><img src="./j-removebg-preview.png" alt="" style={{ width: '50px', height: '50px' }} /></div>
           <div className="nav_menu">
             <button className="button button-small">
               <span>&#11044;</span>
